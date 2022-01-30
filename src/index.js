@@ -59,9 +59,10 @@ function RemakeBox(props) {
 class Game extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      currentIndex: '0',
-      nextIndexes: text['next']['0'].split(','),
+    let startIndex = '0';
+    this.state = {      
+      currentIndex: startIndex,
+      nextIndexes: text['next'][startIndex].split(','),
       isEnd: false,
     };
     this.handleClick = this.handleClick.bind(this);
@@ -83,9 +84,10 @@ class Game extends React.Component {
   }
 
   handleClickRemake() {
+    let startIndex = '0';
     this.setState({
-      currentIndex: '0',
-      nextIndexes: text['next']['0'].split(','),
+      currentIndex: startIndex,
+      nextIndexes: text['next'][startIndex].split(','),
       isEnd: false,
     });
   }
